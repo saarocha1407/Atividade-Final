@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/layout_tablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/layout_smartphone.css">
+    <script src=""></script>
+    <title>Final</title>
+</head>
+<body>
+    <header>
+        <div class="container-grid conteudo-header">
+         <img class="logo" src="imagens/logos_senai_branco.png" alt="Logo senai">
+         <nav id="menu-header" class="menu-header">
+           <a href="#" title="Inicio da página">Inicio</a> 
+           <a href="#mouse">Sobre</a>
+           <a href="#endereco">Endereco</a>
+           <a class="botao" href="mailto:exemplo@emal.com">Contate-nos</a>
+         </nav>
+         <a class="menu-barras" href="javascript: void(0)" onclick="mostrarMenu()">
+            <i id="icone-menu" class="fas fa-bars"></i>
+        </a>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="container-grid conteudo-banner">
+                <div class="texto-banner">
+                    <h1>Cursos técnicos senai</h1>
+                    <div class="linha amarela"></div>
+                    <span class="titulo-senai">Senai Informática</span>
+                    <img class="mouse" id="mouse" src="imagens/mouse-down.png" alt="mouse">
+                </div>
+            </div>
+        </div>
+        <section class="sobre-projetos">
+           <div class="container-grid">
+            <h2>Sobre os Projetos</h2>
+            <div class="conteudo-sobre">
+                <img class="imagem-sobre" src="imagens/imagem-seção-sobre.jpg" alt="Homem explicando conteúdo dos cursos para varios alunos">
+                <div class="texto-sobre"></div>
+                <span class="texto-participantes">participantes</span>
+                <h3>Mais de 80 alunos organizados em 16 grupos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, sequi natus. Optio, vitae vero. Sint commodi veritatis, tempore quod natus aspernatur vel! Quam labore nisi quae explicabo! Debitis, perspiciatis libero.</p>
+            </div>
+           </div>
+        </section>
+        <section class="infon">
+            <div class="container-grid conteudo-info">
+             <div class="card-info">
+                <h3>Local</h3>
+                <p>São Paulo</p>
+             </div>
+             <div class="card-info">
+                <h3>Duração</h3>
+                <p>90 dias</p>
+             </div>
+             <div class="card-info">
+                <h3>Desafios</h3>
+                <p>+30 Desafios</p>
+             </div>
+            </div>
+        </section>
+        <section class="endereco" id="endereco">
+            <div class="container-grid conteudo-endereco">
+                <p>Alameda Barão de Limeira, 539 Santa Cecilia, São Paulo- SP CEP: 01202-001</p>
+            </div>
+            <a href="" target="_blank"><img src="imagens/mapa.png" alt="Mapa mostrando a localização da escola"></a>
+        </section>
+    </main>
+    <footer>
+        <span>Copyright &copy; 2021 - Escola Senai de Informática </span>
+    </footer>
+
+
+
+
+
+
+
+    <script>
+        function mostrarMenu(){
+         var menu=document.getElementById("menu-header")   
+         var icone=document.getElementById("icone-menu")
+
+         if (getComputedStyle(menu).display =='none'){
+            menu.style.display="flex"
+            icone.classList.remove("fa-bars")
+            icone.classList.add("fa-times")
+            //Mudar para times
+         } else{
+            menu.style.display="none"
+            icone.classList.remove("fa-times")
+            icone.classList.add("fa-bars")
+            //Mudar para bars
+         }
+        }
+    </script>
+</body>
+</html>
